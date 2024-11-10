@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs7orair5c3h2"]
+
+[ext_resource type="Texture2D" uid="uid://b37641dfha06p" path="res://oak_woods_v1.0/background/background_layer_1.png" id="1_yydmq"]
+[ext_resource type="Texture2D" uid="uid://o4mtpviouar8" path="res://oak_woods_v1.0/background/background_layer_2.png" id="2_rppto"]
+[ext_resource type="Texture2D" uid="uid://xw2odfto0vnw" path="res://oak_woods_v1.0/background/background_layer_3.png" id="3_naapx"]
+
+[node name="GAME OVER" type="Node2D"]
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1151.98, 0)
+
+[node name="BackgroundLayer1" type="Sprite2D" parent="BG/ParallaxLayer"]
+position = Vector2(1145.5, 637.5)
+scale = Vector2(7.15938, 7.08333)
+texture = ExtResource("1_yydmq")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BG"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1158.17, 0)
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="BG/ParallaxLayer2"]
+position = Vector2(1146.5, 767)
+scale = Vector2(7.17188, 8.48889)
+texture = ExtResource("2_rppto")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="BG"]
+motion_mirroring = Vector2(1158.58, 0)
+
+[node name="BackgroundLayer3" type="Sprite2D" parent="BG/ParallaxLayer3"]
+z_as_relative = false
+position = Vector2(1112, 753)
+scale = Vector2(6.9625, 8.57778)
+texture = ExtResource("3_naapx")
+
+[node name="Label" type="Label" parent="BG"]
+offset_left = 618.0
+offset_top = 354.0
+offset_right = 1365.0
+offset_bottom = 641.0
+theme_override_colors/font_shadow_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "ПОЗДРАВЛЯЮ
+ВЫ ПРОШЛИ ИГРУ"
+horizontal_alignment = 1
+vertical_alignment = 1
